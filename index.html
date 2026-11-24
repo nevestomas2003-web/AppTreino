@@ -263,7 +263,7 @@ function sessionOf(dt){var d=S.days[dt];return (d&&d.session)||WEEK[parse(dt).ge
 /* ---------- armazenamento ---------- */
 var dbRef=null,writing=false,pending=false,timer=null;
 function setStatus(s){ui.status=s;var el=document.getElementById("stat");if(el)el.textContent=statusText();}
-function statusText(){return "Versão 21 · "+(ui.status==="cloud"?"Guardado na tua conta":ui.status==="error"?"Erro a guardar na conta. Os dados ficam neste dispositivo.":"Guardado só neste dispositivo");}
+function statusText(){return "Versão 22 · "+(ui.status==="cloud"?"Guardado na tua conta":ui.status==="error"?"Erro a guardar na conta. Os dados ficam neste dispositivo.":"Guardado só neste dispositivo");}
 function save(){
   S.updated=Date.now();
   try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}
